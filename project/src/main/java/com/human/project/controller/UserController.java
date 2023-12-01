@@ -56,13 +56,14 @@ public class UserController {
 	}
 	
 	@GetMapping("/register")
+	
 	public String registerForm() {
 		return "user/register";
 	}
 	
 	@PostMapping("/register")
 	public String registerProc(String custId, String pwd, String pwd2, String uname, 
-								 String nickname, String email, Model model) {
+								 String nickName, String email, Model model) {
 		System.out.println(custId);
 		if (userService.getUser(custId) != null) {
 			model.addAttribute("msg", "사용자 ID가 중복되었습니다.");
@@ -70,10 +71,10 @@ public class UserController {
 		}
 		if (pwd.equals(pwd2) && pwd.length() >= 4) {	// pwd와 pwd2가 같고, 길이가 4이상이면
 			String hashedPwd = BCrypt.hashpw(pwd, BCrypt.gensalt());
-			User user = new User(custId, hashedPwd, uname, nickname, email);
+			User user = new User(custId, hashedPwd, uname, nickName, email);
 			userService.insertUser(user);
 			model.addAttribute("msg", "등록을 마쳤습니다. 로그인 하세요.");
-			model.addAttribute("url", "/project/user/home");
+			model.addAttribute("url", "/project/user/login");
 		} else {
 			model.addAttribute("msg", "패스워드 입력이 잘못되었습니다.");
 			model.addAttribute("url", "/project/user/login");
