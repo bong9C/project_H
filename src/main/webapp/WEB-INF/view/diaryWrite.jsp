@@ -13,7 +13,7 @@
 	
 			  if (val !== null && val !== undefined) {
 			    read(); 
-			  }
+			  } 
 			}
 		
 		function read() {
