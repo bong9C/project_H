@@ -1,4 +1,4 @@
-package com.example.sample.db;
+package com.human.project_H.db;
 
 
 import org.apache.ibatis.annotations.Insert;
@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import com.example.sample.entity.UserColor;
+import com.human.project_H.entity.UserColor;
 
 
 @Mapper

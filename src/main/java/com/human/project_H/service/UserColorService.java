@@ -1,8 +1,8 @@
-package com.example.sample.service;
+package com.human.project_H.service;
 
 import java.util.List;
 
-import com.example.sample.entity.UserColor;
+import com.human.project_H.entity.UserColor;
 
 public interface UserColorService {
 	

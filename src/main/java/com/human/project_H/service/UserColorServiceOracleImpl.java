@@ -1,15 +1,12 @@
-package com.example.sample.service;
+package com.human.project_H.service;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
-import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.sample.db.UserColorDaoOracle;
-import com.example.sample.entity.UserColor;
+import com.human.project_H.db.UserColorDaoOracle;
+import com.human.project_H.entity.UserColor;
 
 @Service
 public class UserColorServiceOracleImpl implements UserColorService {
