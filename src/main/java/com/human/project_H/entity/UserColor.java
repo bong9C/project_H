@@ -14,7 +14,7 @@ public class UserColor {
 	private boolean commitFlag;
 	private boolean shareFlag;
 	
-	public UserColor() { }
+	public UserColor() { } 
 	
 	
 	
