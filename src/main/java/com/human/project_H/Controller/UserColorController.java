@@ -33,9 +33,9 @@ public class UserColorController {
 	@Autowired private UserColorService userColorService;
 	
 	// 일기 선택 화면
-	@GetMapping("/diarySelect")
+	@GetMapping("/home")
 	public String diarySelect() {
-		return "diarySelect";
+		return "ho";
 	}
 	
 	
@@ -55,7 +55,7 @@ public class UserColorController {
 				UserColor userColor = userColorService.searchUserColor(custId, today.toString());
 				userColorService.updateUserColorCommit(userColor.getUcid(), content, commit, share);
 				model.addAttribute("msg", "작성 완료되었어요.");
-				model.addAttribute("url", "/sample/diary/diaryWrite");
+				model.addAttribute("url", "/project_H/home");
 			
 		}
 		else {
